@@ -1,0 +1,57 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class AssignmentFrame extends JFrame implements ActionListener {
+
+    JLabel l1, l2;
+    JTextField t1, t2;
+    JComboBox<String> combo;
+    JButton btn;
+
+    public AssignmentFrame() {
+        setTitle("Assignment");
+        setSize(400, 350);
+        setLayout(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        l1 = new JLabel("Object Oriented Programming");
+        l2 = new JLabel("CIT Collage");
+
+        l1.setBounds(90, 20, 250, 30);
+        l2.setBounds(140, 50, 200, 30);
+
+        t1 = new JTextField();
+        t2 = new JTextField();
+
+        t1.setBounds(100, 100, 200, 30);
+        t2.setBounds(100, 140, 200, 30);
+
+        String languages[] = {"Eng", "Arabic"};
+        combo = new JComboBox<>(languages);
+        combo.setBounds(100, 180, 200, 30);
+
+        btn = new JButton("button 1");
+        btn.setBounds(140, 230, 120, 30);
+
+        btn.addActionListener(this);
+
+        add(l1);
+        add(l2);
+        add(t1);
+        add(t2);
+        add(combo);
+        add(btn);
+
+        setVisible(true);
+    
+
+    public public void actionPerformed(ActionEvent e) {
+    t1.setText("لمياء علي");
+    t2.setText("446803514");
+    combo.setSelectedItem("Arabic");
+}
+    public static void main(String[] args) {
+        new AssignmentFrame();
+    }
+}
